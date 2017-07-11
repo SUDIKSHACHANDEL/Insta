@@ -4,17 +4,22 @@ from self_info import self_info
 from get_user_info import get_user_info
 from get_own_post import get_own_post
 from get_user_post import get_user_post
-from get_like_list import get_like_list
+from get_like_list import like_list
 from like_a_post import like_a_post
 from get_comment_list import get_comment_list
 from comment_a_post import post_a_comment
 from negative_comment import delete_negative_comment
+from colorama import Fore,Back,Style
+#install colorama library to give different color on text , and background side.
+from termcolor import colored
+
 def start_bot():
     while True:
         print '\n'
-        print 'Hey! Welcome to instaBot.........!'
-        print 'Your menu options are as follow. Please choose any one of the option.........:\n\t\t\t\t\t'
-        print "1.Get your own details\n"
+        print (Fore.RED + 'Hey! Welcome to instaBot.........!\n\n')
+        print (Back.LIGHTCYAN_EX + 'Your menu options are as follow. Please choose any one of the option.........:\n\t\t\t\t\t')
+        print (Style.DIM + "1.Get your own details\n")
+        print (Fore.RED +"1.Get your own details\n")
         print "2.Get details of a user by username\n"
         print "3.Get your own recent post\n"
         print "4.Get the recent post of a user by username\n"
@@ -25,11 +30,11 @@ def start_bot():
         print "9.Delete negative comments from the recent post of a user\n"
         print "10.Exit\n\t\t\t\t"
 
-        choice = raw_input("Enter you choice: ")
+        choice = raw_input(Style.DIM + "Enter you choice: ")
         if choice == "1":
             self_info()
         elif choice == "2":
-            insta_username = raw_input("Enter the username of the user: ")
+            insta_username = raw_input(Back.LIGHTCYAN_EX+"Enter the username of the user: ")
             get_user_info(insta_username)
         elif choice == "3":
             get_own_post()
@@ -38,7 +43,7 @@ def start_bot():
             get_user_post(insta_username)
         elif choice=="5":
            insta_username = raw_input("Enter the username of the user: ")
-           get_like_list(insta_username)
+           like_list(insta_username)
         elif choice=="6":
            insta_username = raw_input("Enter the username of the user: ")
            like_a_post(insta_username)
