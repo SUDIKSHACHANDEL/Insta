@@ -11,7 +11,7 @@ def get_comment_list(insta_username):
     if comment_info['meta']['code'] == 200:
         # if there is some data or info in the comment box.
         if len(comment_info['data']):
-            # This shows that  how to delete the negative comments from any post :)
+
             for x in range(0, len(comment_info['data'])):
                 comment_id = comment_info['data'][x]['id']
                 comment_text = comment_info['data'][x]['text']
