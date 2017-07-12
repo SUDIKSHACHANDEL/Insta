@@ -2,8 +2,9 @@ import requests
 from constants import BASE_URL, APP_ACCESS_TOKEN
 from get_user_post import get_user_post
 from get_post_id import get_post_id
-insta_username = "jyotithakur15111"
+insta_username =raw_input('Enter the user name:-')
 def post_a_comment(insta_username):
+
   media_id = get_post_id(insta_username)
   message = raw_input("Enter your Message: ")
   payload = {"access_token": APP_ACCESS_TOKEN, 'text': message}
@@ -16,8 +17,8 @@ def post_a_comment(insta_username):
   if post_comment['meta']['code'] == 200:
     print "Post comment Successfully"
   else:
-    print "Unable to comment on post"
+    print " Sorry...!Unable to comment on post."
 
   exit()
 
-post_a_comment(insta_username='jyotithakur15111')
+

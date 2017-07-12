@@ -1,7 +1,7 @@
 import requests,urllib
 from constants import APP_ACCESS_TOKEN,BASE_URL
 from get_user_id import get_user_id
-insta_username = "jyotithakur15111"
+
 def get_post_id(insta_username):
     user_id = get_user_id(insta_username)
     if user_id == None:
@@ -21,6 +21,7 @@ def get_post_id(insta_username):
         print 'Status code other than 200 received!'
         exit()
 
-get_post_id(insta_username="jyotithakur15111")
+
+
 
 

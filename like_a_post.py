@@ -17,4 +17,4 @@ def like_a_post(insta_username):
     print "Post Liked Successfully"
   else:
     print "Unable to like post"
-like_a_post(insta_username="jyotithakur15111")
+

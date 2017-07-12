@@ -17,6 +17,14 @@ def get_own_post():
             urllib.urlretrieve(image_url,image_name)
             print'Your image has been downloaded!'
 
+
+             # service = ['food','clothes']
+             # for post in own_media['data']:
+             #    for serve in service:
+             #        if serve in post['caption']['text']:
+             #             pass
+
+
         else:
             print'Post does not exist!'
 
@@ -24,4 +32,4 @@ def get_own_post():
     else:
         print'Status code other than 200 recevied!'
 
-get_own_post()
+

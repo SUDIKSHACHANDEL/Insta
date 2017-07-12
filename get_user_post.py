@@ -19,7 +19,7 @@ def get_user_post(insta_username):
 
 
     if user_media['meta']['code'] == 200:
-        #Extract post ID
+        # Here we can extract post ID
 
 
         if len(user_media['data']):
@@ -37,4 +37,3 @@ def get_user_post(insta_username):
     else:
         print"Status code other than 200 recevied!"
 
-get_user_post(insta_username)

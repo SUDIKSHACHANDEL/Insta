@@ -45,4 +45,3 @@ def delete_negative_comment(insta_username):
         print 'Status code other than 200 received!'
 
 
-delete_negative_comment(insta_username="jyotithakur15111")

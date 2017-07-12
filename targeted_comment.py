@@ -16,13 +16,17 @@ def target_a_comment(insta_username):
   print 'GET request url : %s' % (request_url)
   user_media = requests.get(request_url).json()
 
-  service = [ 'clothes','coffee','Ice-cream','Pizza..','dress']
+
+  service = [ 'clothes','shoes','Pizza..','coffee','Ice-cream']
   for post in user_media['data']:
       for serve in service:
           if serve in post['caption']['text']:
-              post_a_comment(insta_username)
+
+            post_a_comment(insta_username)
+
+
           else:
               print'Not match by user\'s interst'
 
 
-target_a_comment(insta_username = 'sharmatanu9878')
+
